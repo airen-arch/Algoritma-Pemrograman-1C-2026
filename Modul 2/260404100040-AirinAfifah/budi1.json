@@ -1,0 +1,322 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 560,
+      "y": 45,
+      "w": 135,
+      "h": 45
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "kode",
+      "x": 540,
+      "y": 123,
+      "w": 175,
+      "h": 55
+    },
+    {
+      "id": 4,
+      "type": "process",
+      "text": "nilai_awal=digit1*digit3",
+      "x": 851,
+      "y": 265,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 5,
+      "type": "decision",
+      "text": "digit2 % 2 == 1",
+      "x": 1105,
+      "y": 244,
+      "w": 107,
+      "h": 107
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "nilai_tahap1=nilai_awal+25",
+      "x": 1069,
+      "y": 425,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "nilai_tahap1=nilai_awal-digit2",
+      "x": 1352,
+      "y": 265,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 8,
+      "type": "decision",
+      "text": "nilai_tahap1 % 3 == 0",
+      "x": 1381,
+      "y": 397,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 9,
+      "type": "process",
+      "text": "nilai_akhir=nilai_tahap1//3",
+      "x": 1352,
+      "y": 613,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "nilai_akhir=nilai_tahap1*2",
+      "x": 1739,
+      "y": 425,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 11,
+      "type": "decision",
+      "text": "nilai_akhir > 50",
+      "x": 1768,
+      "y": 728,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 14,
+      "type": "decision",
+      "text": "nilai_akhir > 20",
+      "x": 1768,
+      "y": 971,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 17,
+      "type": "decision",
+      "text": "nilai_akhir % 2 == 0",
+      "x": 1211,
+      "y": 1182,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 20,
+      "type": "output",
+      "text": "digit1, digit2, digit3",
+      "x": 871,
+      "y": 1427,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 22,
+      "type": "end",
+      "text": "End",
+      "x": 291,
+      "y": 1433,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 23,
+      "type": "process",
+      "text": "digit1 = (kode - kode % 100) / 100;\ndigit2 = (kode % 100 - kode % 10) / 10;\ndigit3=kode%10",
+      "x": 516,
+      "y": 242,
+      "w": 225,
+      "h": 111
+    },
+    {
+      "id": 26,
+      "type": "output",
+      "text": "nilai_awal, nilai_tahap1, nilai_akhir, status",
+      "x": 570,
+      "y": 1427,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 27,
+      "type": "output",
+      "text": "\"kategori B\"",
+      "x": 1734,
+      "y": 1207,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 28,
+      "type": "output",
+      "text": "\"kategori A\"",
+      "x": 1176,
+      "y": 755,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 29,
+      "type": "output",
+      "text": "\"password ditolak\"",
+      "x": 1448,
+      "y": 997,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 30,
+      "type": "output",
+      "text": "\"siklus ganjil\"",
+      "x": 870,
+      "y": 1208,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 31,
+      "type": "output",
+      "text": "\"siklus genap\"",
+      "x": 1176,
+      "y": 1427,
+      "w": 190,
+      "h": 70
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": "true"
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "branch": "false"
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "branch": "false"
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "branch": "true"
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 9,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "branch": "false"
+    },
+    {
+      "from": 2,
+      "to": 23,
+      "branch": null
+    },
+    {
+      "from": 20,
+      "to": 26,
+      "branch": null
+    },
+    {
+      "from": 26,
+      "to": 22,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 28,
+      "branch": "true"
+    },
+    {
+      "from": 14,
+      "to": 27,
+      "branch": "true"
+    },
+    {
+      "from": 27,
+      "to": 17,
+      "branch": null
+    },
+    {
+      "from": 28,
+      "to": 17,
+      "branch": null
+    },
+    {
+      "from": 14,
+      "to": 29,
+      "branch": "false"
+    },
+    {
+      "from": 29,
+      "to": 17,
+      "branch": null
+    },
+    {
+      "from": 17,
+      "to": 31,
+      "branch": "true"
+    },
+    {
+      "from": 17,
+      "to": 30,
+      "branch": "false"
+    },
+    {
+      "from": 30,
+      "to": 20,
+      "branch": null
+    },
+    {
+      "from": 31,
+      "to": 20,
+      "branch": null
+    },
+    {
+      "from": 23,
+      "to": 4,
+      "branch": null
+    }
+  ],
+  "nextId": 33
+}
